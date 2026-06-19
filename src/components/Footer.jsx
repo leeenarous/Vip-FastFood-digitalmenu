@@ -5,6 +5,7 @@ import {
   FaFacebookF,
   FaWhatsapp,
   FaPhoneAlt,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -26,7 +27,18 @@ export default function Footer() {
         <a href="tel:‏+963930413363‏" target="_blank">
           <FaPhoneAlt />
         </a>
+
+        
+       <a   href="https://maps.app.goo.gl/GN1hqvhktphRd5KbA"
+          target="_blank"
+        >
+          <FaMapMarkerAlt />
+        </a>
       </div>
+
+      <p className="footer-address">
+        📍 طرطوس - الحمرات - خلف مفروشات العجي - جانب كافيه راية ومشفى نزيه ابراهيم
+      </p>
 
       <p>© 2026 VIP FAST FOOD — ALL RIGHTS RESERVED</p>
     </footer>

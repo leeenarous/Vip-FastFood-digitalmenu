@@ -123,6 +123,29 @@ const categoryIcons = {
     <circle cx="46" cy="3" r="3.5" fill="#66AAFF" stroke="#2255AA" stroke-width="1"/>
     <ellipse cx="26" cy="17" rx="5" ry="2" fill="#fff" opacity="0.2"/>
   </svg>`,
+  "الإضافات": `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="44" r="10" fill="#E85020" stroke="#A03010" stroke-width="1.5"/>
+    <circle cx="20" cy="44" r="7" fill="#F06030" opacity="0.6"/>
+    <path d="M16 41 Q20 38 24 41" stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+    <rect x="34" y="34" width="20" height="20" rx="4" fill="#F5C840" stroke="#A08010" stroke-width="1.5" transform="rotate(15 44 44)"/>
+    <rect x="37" y="37" width="14" height="14" rx="2" fill="#fff" opacity="0.15" transform="rotate(15 44 44)"/>
+    <ellipse cx="32" cy="18" rx="14" ry="6" fill="#E8A020" stroke="#A06010" stroke-width="1.5"/>
+    <ellipse cx="32" cy="16" rx="11" ry="4.5" fill="#F5C040"/>
+    <path d="M22 14 Q26 10 32 11 Q38 10 42 14" stroke="#A06010" stroke-width="1" opacity="0.5" fill="none"/>
+  </svg>`,
+
+  "وجبات دجاج": `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="32" cy="32" r="28" fill="#E8A020" stroke="#A06010" stroke-width="1.5"/>
+    <circle cx="32" cy="32" r="24" fill="#F5D080" stroke="#C8A050" stroke-width="1"/>
+    <circle cx="32" cy="32" r="20" fill="#FBE8C0"/>
+    <ellipse cx="24" cy="26" rx="9" ry="6" fill="#D49020" stroke="#8A5010" stroke-width="1.2" transform="rotate(-20 24 26)"/>
+    <ellipse cx="40" cy="24" rx="8" ry="6" fill="#E8A020" stroke="#A06010" stroke-width="1.2" transform="rotate(15 40 24)"/>
+    <ellipse cx="22" cy="40" rx="8" ry="5.5" fill="#E8A020" stroke="#A06010" stroke-width="1.2" transform="rotate(25 22 40)"/>
+    <ellipse cx="40" cy="40" rx="8.5" ry="6" fill="#D49020" stroke="#8A5010" stroke-width="1.2" transform="rotate(-15 40 40)"/>
+    <circle cx="32" cy="32" r="4" fill="#5A9A30" opacity="0.85"/>
+    <circle cx="26" cy="34" r="2.5" fill="#5A9A30" opacity="0.7"/>
+    <circle cx="38" cy="30" r="2" fill="#E85030" opacity="0.8"/>
+  </svg>`,
 };
 
 const defaultIcon = `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
