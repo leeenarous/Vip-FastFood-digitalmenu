@@ -14,9 +14,13 @@ export default function Header() {
         </motion.h1>
       </div>
 
-      <p className="subtitle">
-    🔥 لديكم ... لا خوف عليكم ... <span >VIP</span>🔥
-      </p>
+
+<p className="subtitle">
+  🔥 لديكم ... لا خوف عليكم ...
+  <span className="vip">VIP</span>
+  🔥
+</p>
+    
     </header>
     </>
   );

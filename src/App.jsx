@@ -8,7 +8,7 @@ import CategoryPage from "./components/CategoryPage";
 import ItemPage from "./components/ItemPage";
 import Footer from "./components/Footer";
 import useMenuData from "./assets/useMenuData";
-import LikeBox from "./components/LikeBox";
+import RateUs from "./components/RateUs";
 
 export default function App() {
   const { groupedMenu, loading, error } = useMenuData("1-fD1EKUGNs9Qu63A3zV7DOx39nhe0ZqjBLVvcwBXVwo");
@@ -38,7 +38,7 @@ export default function App() {
           } />
         </Routes>
       </main>
-      <LikeBox />
+      <RateUs />
       <Footer />
     </div>
   );
