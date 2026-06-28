@@ -17,10 +17,12 @@ export default function RateUs() {
           href="https://www.facebook.com/vip.tartus/reviews/?ref=page_internal"
           target="_blank"
           rel="noopener noreferrer"
+          data-no-app="true"
           className="rate-cta"
         >
           قيّمنا على فيسبوك ←
         </a>
+    
       </div>
     </div>
   );
