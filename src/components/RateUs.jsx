@@ -14,7 +14,7 @@ export default function RateUs() {
         <h3>شو رأيك فينا؟</h3>
         <p>تقييمك بيهمنا</p>
         <a
-          href="https://www.facebook.com/vip.tartus/reviews/?tab=reviews"
+          href="https://www.facebook.com/vip.tartus/reviews/?_rdr"
           target="_blank"
           rel="noopener noreferrer"
           data-no-app="true"
