@@ -16,7 +16,7 @@ export default function RateUs() {
         <p>تقييمك بيهمنا</p>
 
         <a
-          href="https://m.facebook.com/vip.tartus/reviews/"
+          href="https://www.facebook.com/vip.tartus/reviews/?sk=reviews"
           target="_blank"
           rel="noopener noreferrer"
           className="rate-cta"
