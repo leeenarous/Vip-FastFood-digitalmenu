@@ -11,18 +11,18 @@ export default function RateUs() {
           <span>★</span>
           <span>★</span>
         </div>
+
         <h3>شو رأيك فينا؟</h3>
         <p>تقييمك بيهمنا</p>
+
         <a
-          href="https://www.facebook.com/vip.tartus/reviews/?_rdr"
+          href="https://m.facebook.com/vip.tartus/reviews/"
           target="_blank"
           rel="noopener noreferrer"
-          data-no-app="true"
           className="rate-cta"
         >
           قيّمنا على فيسبوك ←
         </a>
-    
       </div>
     </div>
   );
