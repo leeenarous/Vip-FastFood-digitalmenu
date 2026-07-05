@@ -3,25 +3,11 @@ import React from "react";
 export default function RateUs() {
   const baseUrl = import.meta.env.VITE_SOME_URL;
 
-  const isAndroid = /android/i.test(navigator.userAgent);
-
-  const openFacebookReview = () => {
-    if (isAndroid) {
-      const encodedUrl = encodeURIComponent(baseUrl);
-      window.location.href = `fb://facewebmodal/f?href=${encodedUrl}`;
-    } else {
-      window.open(baseUrl, "_blank", "noopener,noreferrer");
-    }
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    openFacebookReview();
-  };
-
   return (
     <div className="rate-us-wrap">
       <div className="rate-card">
+
+        <h3> شو رأيك فينا ؟</h3>
         <div className="rate-stars">
           <span>★</span>
           <span>★</span>
@@ -29,16 +15,12 @@ export default function RateUs() {
           <span>★</span>
           <span>★</span>
         </div>
-
-        <h3>شو رأيك فينا؟</h3>
-        <p>تقييمك بيهمنا</p>
-
         
          <a href={baseUrl}
-          onClick={handleClick}
+         target="_blank"
           className="rate-cta"
         >
-          قيّمنا على فيسبوك ←
+         تابعنا و قيمنا على فيسبوك ←
         </a>
       </div>
     </div>
