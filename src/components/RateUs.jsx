@@ -15,7 +15,7 @@ export default function RateUs() {
           <span>★</span>
         </div>
         
-         <a href="https://www.facebook.com/vip.tartus/reviews/"
+         <a href="https://www.facebook.com/vip.tartus"
          target="_blank"
           className="rate-cta">
          تابعنا و قيمنا على فيسبوك ←
