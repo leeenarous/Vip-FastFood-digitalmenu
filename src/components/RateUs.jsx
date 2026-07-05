@@ -34,7 +34,7 @@ export default function RateUs() {
         <p>تقييمك بيهمنا</p>
 
         
-          href={baseUrl}
+         <a href={baseUrl}
           onClick={handleClick}
           target="_blank"
           rel="noopener noreferrer"
