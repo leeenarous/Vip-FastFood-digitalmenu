@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function RateUs() {
-  const baseUrl = import.meta.env.VITE_SOME_URL;
 
   return (
     <div className="rate-us-wrap">
@@ -16,7 +15,7 @@ export default function RateUs() {
           <span>★</span>
         </div>
         
-         <a href={baseUrl}
+         <a href="https://www.facebook.com/vip.tartus"
          target="_blank"
           className="rate-cta"
         >
