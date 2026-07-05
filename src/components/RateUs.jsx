@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function RateUs() {
   const baseUrl = import.meta.env.VITE_SOME_URL;
+  const [copied, setCopied] = useState(false);
 
-  const getFacebookUrl = () => {
-    const isAndroid = /android/i.test(navigator.userAgent);
+  const isAndroid = /android/i.test(navigator.userAgent);
 
-    if (isAndroid) {
-      const cleanUrl = baseUrl.replace("https://", "");
-      return `intent://${cleanUrl}#Intent;scheme=https;package=com.android.chrome;end`;
-    }
+  const handleClick = async (e) => {
+    if (!isAndroid) return; 
 
-    return baseUrl;
-  };
-
-  const handleClick = (e) => {
     e.preventDefault();
-    window.location.href = getFacebookUrl();
+
+    const cleanUrl = baseUrl.replace("https://", "");
+    window.location.href = `intent://${cleanUrl}#Intent;scheme=https;end`;
+    try {
+      await navigator.clipboard.writeText(baseUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 4000);
+    } catch (err) {
+      console.log("Clipboard not available");
+    }
   };
 
   return (
@@ -34,7 +37,7 @@ export default function RateUs() {
         <p>تقييمك بيهمنا</p>
 
         
-         <a href={baseUrl}
+        <a  href={baseUrl}
           onClick={handleClick}
           target="_blank"
           rel="noopener noreferrer"
@@ -42,6 +45,12 @@ export default function RateUs() {
         >
           قيّمنا على فيسبوك ←
         </a>
+
+        {copied && (
+          <p className="copy-hint">
+           Chrome
+          </p>
+        )}
       </div>
     </div>
   );
