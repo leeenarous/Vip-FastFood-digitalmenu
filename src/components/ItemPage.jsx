@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import TicTacToe from "./Tictactoe";
 
 export default function ItemPage({ groupedMenu }) {
   const { categoryName, itemIndex } = useParams();
@@ -17,6 +18,7 @@ export default function ItemPage({ groupedMenu }) {
   if (!item) return <div className="error-box">الصنف غير موجود</div>;
 
   return (
+    <>
     <div className="item-page">
       <button className="back-btn" onClick={() => navigate(`/category/${encodeURIComponent(category)}`)}>
         ← رجوع
@@ -51,5 +53,7 @@ export default function ItemPage({ groupedMenu }) {
         </div>
       </div>
     </div>
+            <TicTacToe/>
+    </>
   );
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import LikeBox from "../components/LikeBox";
+import TicTacToe from "./Tictactoe";
+
 const categoryIcons = {
   "ساندويش دجاج مقلي": `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
     <path d="M18 46 Q14 38 18 28 Q24 16 36 18 Q48 20 50 32 Q52 42 44 48 Q34 56 18 46Z" fill="#E8A020" stroke="#A06010" stroke-width="1.5"/>
@@ -167,6 +170,7 @@ export default function CategoryGrid({ categories, groupedMenu, loading }) {
   }
 
   return (
+    <>
     <section className="grid">
       {categories.map((category) => {
         const svgIcon = categoryIcons[category] || defaultIcon;
@@ -186,6 +190,11 @@ export default function CategoryGrid({ categories, groupedMenu, loading }) {
           </div>
         );
       })}
+
     </section>
+     <LikeBox/>
+     <TicTacToe/>
+  </>
   );
+
 }
