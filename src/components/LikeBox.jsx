@@ -11,7 +11,11 @@ export default function LikeBox() {
   };
 
   return (
-    <div className="like-box">
+    <div
+      className="like-box"
+      onTouchStart={moveButton}
+      style={{ touchAction: "none" }}
+    >
       <h3>حبيت و لا ما حبيت ؟</h3>
 
       <button className="yes-btn" onClick={() => setThanks(true)} type="button">
@@ -22,9 +26,9 @@ export default function LikeBox() {
         type="button"
         className="no-btn"
         onMouseEnter={moveButton}
-        onTouchStart={moveButton}
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
+          touchAction: "none",
         }}
       >
         ما حبيت 👎

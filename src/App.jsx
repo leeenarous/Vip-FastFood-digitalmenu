@@ -38,7 +38,7 @@ export default function App() {
           } />
         </Routes>
       </main>
-      <RateUs />
+
       <Footer />
     </div>
   );

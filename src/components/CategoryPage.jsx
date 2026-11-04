@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import RateUs from "./RateUs";
 
 export default function CategoryPage({ groupedMenu, loading, error }) {
   const { categoryName } = useParams();
@@ -20,6 +21,7 @@ export default function CategoryPage({ groupedMenu, loading, error }) {
   if (error) return <div className="error-box">{error}</div>;
 
   return (
+    <>
     <section className="menu-section">
       <button className="back-btn" onClick={() => navigate("/")}>← رجوع</button>
       <h2 className="section-title">{category}</h2>
@@ -42,5 +44,7 @@ export default function CategoryPage({ groupedMenu, loading, error }) {
         ))}
       </div>
     </section>
+    <RateUs/>
+    </>
   );
 }

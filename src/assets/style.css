@@ -730,6 +730,218 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 14px 30px rgba(255,204,0,0.4);
 }
+.xo-wrapper {
+  --xo-black: #0d0d0d;
+  --xo-black-soft: #1a1a1a;
+  --xo-red: #e01e26;
+  --xo-red-dark: #a3151b;
+  --xo-yellow: #ffc400;
+  --xo-yellow-dark: #cc9c00;
+  --xo-text: #f5f5f5;
+  --xo-text-muted: rgba(245, 245, 245, 0.65);
+
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.xo-wrapper * {
+  box-sizing: border-box;
+}
+
+/* زر الفتح */
+.xo-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--xo-black);
+  background: linear-gradient(135deg, var(--xo-yellow), var(--xo-yellow-dark));
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(255, 196, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.xo-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(255, 196, 0, 0.5);
+}
+
+.xo-trigger:active {
+  transform: translateY(0);
+}
+
+.xo-trigger__icon {
+  font-size: 20px;
+}
+
+/* بطاقة اللعبة الزجاجية */
+.xo-card {
+  width: 100%;
+  max-width: 340px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 196, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  color: var(--xo-text);
+  animation: xo-fade-in 0.25s ease;
+}
+
+@keyframes xo-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.xo-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.xo-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--xo-yellow);
+  letter-spacing: 0.3px;
+}
+
+.xo-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--xo-text);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.xo-close:hover {
+  background: var(--xo-red);
+  border-color: var(--xo-red);
+}
+
+/* شريط الحالة */
+.xo-status {
+  margin: 4px 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--xo-text-muted);
+  text-align: center;
+}
+
+.xo-status--win {
+  color: var(--xo-yellow);
+}
+
+.xo-status--lose {
+  color: var(--xo-red);
+}
+
+.xo-status--draw {
+  color: var(--xo-text);
+}
+
+/* لوحة اللعبة */
+.xo-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.xo-cell {
+  aspect-ratio: 1 / 1;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--xo-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.xo-cell:not(:disabled):hover {
+  background: rgba(255, 196, 0, 0.12);
+  border-color: rgba(255, 196, 0, 0.4);
+}
+
+.xo-cell:not(:disabled):active {
+  transform: scale(0.95);
+}
+
+.xo-cell:disabled {
+  cursor: default;
+}
+
+.xo-cell--x {
+  color: var(--xo-yellow);
+}
+
+.xo-cell--o {
+  color: var(--xo-red);
+}
+
+.xo-cell--filled {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* الأزرار السفلية */
+.xo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.xo-btn {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--xo-text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.xo-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.xo-btn--primary {
+  color: var(--xo-black);
+  background: linear-gradient(135deg, var(--xo-red), var(--xo-red-dark));
+  border-color: transparent;
+}
+
+.xo-btn--primary:hover {
+  background: linear-gradient(135deg, #ff2c34, var(--xo-red));
+}
 @media (max-width: 992px) {
   .grid,
   .menu-grid {
@@ -768,5 +980,36 @@ body {
 
   .socials {
     flex-wrap: wrap;
+  }
+    .xo-card {
+    max-width: 380px;
+    padding: 24px;
+  }
+
+  .xo-cell {
+    font-size: 34px;
+  }
+}
+@media (max-width: 400px) {
+  .xo-card {
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .xo-cell {
+    font-size: 24px;
+    border-radius: 10px;
+  }
+
+  .xo-trigger {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .xo-title {
+    font-size: 16px;
   }
 }
