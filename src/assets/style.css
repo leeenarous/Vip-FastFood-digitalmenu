@@ -21,7 +21,7 @@ body {
   background-color: var(--black);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.92)),
-    url("/public/Images/656687252_1359569726198930_5610255231132122452_n.jpg");
+    url("/public/Images/vip-fastfood.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
