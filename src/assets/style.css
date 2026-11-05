@@ -71,7 +71,7 @@ body {
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   text-transform: uppercase;
-  color: #ffcc00;
+  color: #ff0000;
   letter-spacing: 6px;
   animation: flicker 1.5s infinite;
 }
@@ -91,7 +91,7 @@ body {
 }
 
 #fire-text span {
-  color: var(--white);
+  color: #ffcc00;
 }
 
 @keyframes flicker {
